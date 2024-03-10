@@ -1,12 +1,12 @@
 import { v4 } from uuid;
 
 export class HealthEvent{
-    constructor(e){
-        this.id=e.id||v4();
-        this.at=e.at||(new Date());
-        this.patent=e.patient;
-        this.type=e.type;
-        this.description=e.description;
-        this.viewed=e.viewed;
+    constructor({id=v4(), at=(new Date()),patient, type, description,viewed}){
+        this.id=id;
+        this.at=at;
+        this.patent=patient;
+        this.type=type;
+        this.description=description;
+        this.viewed=viewed;
     }
 }

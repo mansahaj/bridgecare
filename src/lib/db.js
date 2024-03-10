@@ -1,6 +1,6 @@
-import {User} from "./People"
+import {User} from "./User"
 
-export const people=[
+export const users=[
     new User({
         id:1,
         name:"Audrey",
@@ -13,14 +13,6 @@ export const people=[
     })
 ];
 
-let events=[
+export let events=[
 
 ];
-
-export async function loadEvents(){
-    
-}
-
-export async function saveEvent(e){
-
-}

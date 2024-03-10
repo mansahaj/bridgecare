@@ -1,18 +1,24 @@
-<!-- <script>
-    import { onMount } from 'svelte';
-
-    onMount(()=>{
-            Notification.requestPermission().then((result) => {
-            console.log(result);
-        });
-
-        setInterval(()=>{
-            new Notification("test",{
-                text:"annoying notification"
-            })
-        }, 2000);
+<script>
+function allowNotifications(){
+    Notification.requestPermission().then((result) => {
+        console.log(result);
     });
-</script> -->
+
+    // setInterval(()=>{
+        const n = new Notification("test",{
+            text:"You have a new health event",
+            data:{
+                url:"/history?evt=2"
+            }
+        })
+        n.addEventListener("click",ev=>{
+            ev.preventDefault(); // prevent the browser from focusing the Notification's tab
+            console.log(ev)
+            window.location.href =ev.target.data.url;
+        })
+    // }, 2000);
+}
+</script>
 
 <svelte:head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,6 +49,8 @@
           <a class="nav-link active text-dark" aria-current="page" href="./home">Home</a>
           <a class="nav-link active text-dark" href="./history">Notifications</a>
           <a class="nav-link active text-dark" href="./chat">AI chatbot</a>
+          <a class="nav-link active text-dark" href="./setup?p=2">Patient Setup</a>
+            <button on:click={allowNotifications}>Allow Notifications</button>
         </div>
       </div>
     </div>

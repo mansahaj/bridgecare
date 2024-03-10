@@ -15,7 +15,7 @@
 }
 
 #chatlogs {
-    height: 400px; /* Increased from 200px to 300px */
+    height: 45vh; /* Increased from 200px to 300px */
     overflow-y: scroll;
     margin-bottom: 10px;
 }

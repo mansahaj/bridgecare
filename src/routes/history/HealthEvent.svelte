@@ -3,20 +3,24 @@
 
 
 </script>
-
-<div>
+<style>
+    .border_container{
+        border: 2px solid#000;
+        padding: 20px;
+        margin: 10px;
+    }
+</style>
+<div  class = "border_container">
     <div>
-        <div>Ocurred At</div>
-        <div>{healthevent.at}</div>
+        <b>Ocurred At:</b> {healthevent.at}
     </div>
     <div>
-        for {healthevent.patient.name}
+        <b>For:</b> {healthevent.patient.name}
     </div>
     <div>
-        <div>Event</div>
-        <div>{healthevent.type}</div>
+        <b>Event:</b> {healthevent.type}
     </div>
     <div>
-        {healthevent.description}
+        <b>Description:</b> {healthevent.description}
     </div>
 </div>

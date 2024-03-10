@@ -1,4 +1,4 @@
-import { getHealthEvents } from "../../lib/HealthEventStore";
+import { getHealthEvents } from "$lib/HealthEventStore";
 
 export async function load({url}){
     const healthevents = await getHealthEvents(1);

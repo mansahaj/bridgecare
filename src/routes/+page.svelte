@@ -63,7 +63,7 @@
                 <div class="card-body">
                   <h5 class="card-title">AI Chatbot</h5>
                   <p class="card-text">Talk to our AI chatbot</p>
-                  <a href="./chat/+page.svelte" class="btn btn-primary">Access</a>
+                  <a href="./chat" class="btn btn-primary">Access</a>
                 </div>
               </div>
           </div>    

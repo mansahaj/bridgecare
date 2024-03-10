@@ -3,6 +3,7 @@
     export let data;
     
     $:healthevents=data.healthevents;
+    $:eventId=data.selectedevent;
     
 </script>
 
@@ -39,6 +40,6 @@
 
 <div>
 {#each healthevents as healthevent}
-    <HealthEvent {healthevent}></HealthEvent>
+    <HealthEvent {healthevent} selected={healthevent.id==eventId}></HealthEvent>
 {/each}
 </div>

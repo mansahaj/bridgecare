@@ -1,3 +1,31 @@
+<script>
+    import { onMount } from 'svelte';
+
+    onMount(()=>{
+
+    });
+
+function allowNotifications(){
+    Notification.requestPermission().then((result) => {
+        console.log(result);
+    });
+
+    // setInterval(()=>{
+        const n = new Notification("test",{
+            text:"You have a new health event",
+            data:{
+                url:"/history?evt=2"
+            }
+        })
+        n.addEventListener("click",ev=>{
+            ev.preventDefault(); // prevent the browser from focusing the Notification's tab
+            console.log(ev)
+            window.location.href =ev.target.data.url;
+        })
+    // }, 2000);
+}
+</script>
+
 <svelte:head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -37,3 +65,14 @@
         </form>
       </main>
 </section>
+
+<section>
+    <button on:click={allowNotifications}>Allow Notifications</button>
+</section>
+
+<section id = "footer">
+
+</section>
+
+
+

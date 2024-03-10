@@ -20,8 +20,9 @@ export let events=[
         type:"test type",
         description:"test description"
     }), new HealthEvent({
+        id:"2",
         patient:2,
-        type:"test type",
-        description:"test description"
+        type:"test TWO",
+        description:"test TWO"
     })
 ];

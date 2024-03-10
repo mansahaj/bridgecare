@@ -10,9 +10,10 @@
         margin: 10px;
     }
     .border_container--selected{
-        border: 2px solid cornflowerblue;
+        border: 2px solid #000;
         padding: 20px;
         margin: 10px;
+        background-color: lightblue;
     }
 </style>
 <div  class = "{selected?'border_container--selected':'border_container'}">

@@ -3,9 +3,7 @@
     export let data;
     
     $:healthevents=data.healthevents;
-
-    const params=(new URLSearchParams(window.location.search));
-    const eventId=parseInt(params("evt"));
+    $:eventId=data.selectedevent;
     
 </script>
 

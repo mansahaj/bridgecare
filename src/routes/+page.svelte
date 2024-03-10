@@ -14,7 +14,7 @@ function allowNotifications(){
         const n = new Notification("test",{
             text:"You have a new health event",
             data:{
-                url:"/history"
+                url:"/history?evt=2"
             }
         })
         n.addEventListener("click",ev=>{

@@ -2,16 +2,28 @@
     import { onMount } from 'svelte';
 
     onMount(()=>{
-            Notification.requestPermission().then((result) => {
-            console.log(result);
-        });
 
-        setInterval(()=>{
-            new Notification("test",{
-                text:"annoying notification"
-            })
-        }, 2000);
     });
+
+function allowNotifications(){
+    Notification.requestPermission().then((result) => {
+        console.log(result);
+    });
+
+    // setInterval(()=>{
+        const n = new Notification("test",{
+            text:"You have a new health event",
+            data:{
+                url:"/history"
+            }
+        })
+        n.addEventListener("click",ev=>{
+            ev.preventDefault(); // prevent the browser from focusing the Notification's tab
+            console.log(ev)
+            window.location.href =ev.target.data.url;
+        })
+    // }, 2000);
+}
 </script>
 
 <svelte:head>
@@ -84,6 +96,9 @@
           </div>    
 </section>
 
+<section>
+    <button on:click={allowNotifications}>Allow Notifications</button>
+</section>
 
 <section id = "footer">
 

@@ -49,9 +49,8 @@ function allowNotifications(){
           <a class="nav-link active text-dark" aria-current="page" href="./home">Home</a>
           <a class="nav-link active text-dark" href="./history">Notifications</a>
           <a class="nav-link active text-dark" href="./chat">AI chatbot</a>
-          <section>
+          <a class="nav-link active text-dark" href="./setup?p=2">Patient Setup</a>
             <button on:click={allowNotifications}>Allow Notifications</button>
-          </section>
         </div>
       </div>
     </div>

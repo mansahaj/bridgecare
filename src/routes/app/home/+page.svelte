@@ -6,7 +6,7 @@
         <img src="/logo.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">CareFlow</h1>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">BridgeCare</h1>
         <p class="lead">A website to automate caregiver to medical officials communication</p>
       </div>
     </div>

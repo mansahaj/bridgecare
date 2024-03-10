@@ -1,6 +1,6 @@
 import { v4 } from uuid;
 
-export class Event{
+export class HealthEvent{
     constructor(e){
         this.id=e.id||v4();
         this.at=e.at||(new Date());

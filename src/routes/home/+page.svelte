@@ -46,10 +46,10 @@ function allowNotifications(){
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active text-dark" aria-current="page" href="./home">Home</a>
-          <a class="nav-link active text-dark" href="./history">Notifications</a>
-          <a class="nav-link active text-dark" href="./chat">AI chatbot</a>
-          <a class="nav-link active text-dark" href="./setup?p=2">Patient Setup</a>
+          <a class="nav-link active text-dark px-3" aria-current="page" href="./home">Home</a>
+          <a class="nav-link active text-dark px-3" href="./history">History</a>
+          <a class="nav-link active text-dark px-3" href="./chat">AI chatbot</a>
+          <a class="nav-link active text-dark px-3" href="./setup?p=2">Patient Setup</a>
             <button on:click={allowNotifications}>Allow Notifications</button>
         </div>
       </div>

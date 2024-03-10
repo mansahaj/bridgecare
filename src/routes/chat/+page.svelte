@@ -16,11 +16,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active text-dark" aria-current="page" href="/">Home</a>
+              <a class="nav-link active text-dark" aria-current="page" href="./home">Home</a>
               <a class="nav-link active text-dark" href="./history">Notifications</a>
               <a class="nav-link active text-dark" href="./chat">AI chatbot</a>
             </div>
           </div>
         </div>
       </nav>
+</section>
+
+<section id = "heading">
+    <h1 class="text-center p-5">Island Health Chatbot</h1>
 </section>

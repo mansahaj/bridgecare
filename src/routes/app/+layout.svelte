@@ -23,7 +23,7 @@
         });
     
         // setInterval(()=>{
-            const n = new Notification("test",{
+            const n = new Notification("Health event for Travis",{
                 text:"You have a new health event",
                 data:{
                     url:"/app/history?evt=2"

@@ -1,3 +1,19 @@
+<script>
+    import { onMount } from 'svelte';
+
+    onMount(()=>{
+            Notification.requestPermission().then((result) => {
+            console.log(result);
+        });
+
+        setInterval(()=>{
+            new Notification("test",{
+                text:"annoying notification"
+            })
+        }, 2000);
+    });
+</script>
+
 <svelte:head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

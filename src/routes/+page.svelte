@@ -19,10 +19,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#title">Home</a>
-          <a class="nav-link active" href="#about">About</a>
-          <a class="nav-link active" href="#projects">Projects</a>
-          <a class="nav-link active" href="#workexp">Experience</a>
+          <a class="nav-link active text-dark" aria-current="page" href="#title">Home</a>
+          <a class="nav-link active text-dark" href="./history">Notifications</a>
+          <a class="nav-link active text-dark" href="./chat">AI chatbot</a>
         </div>
       </div>
     </div>
@@ -31,9 +30,9 @@
 
 <sections id = "header">
 <div class="container col-xxl-8 px-4 py-5 ">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    <div class="row flex-lg-row-reverse align-items-center g-5 pb-3">
+      <div class="col-10 col-sm-8 col-lg-6"> 
+        <img src="./logo.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">CareFlow</h1>
@@ -46,10 +45,10 @@
 <section id = "body">
     <div class="container">
         <h1 class = "pb-5 text-center">Our Features</h1>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-5 px-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-5 px-5 pb-4">
           <div class="col">
-            <div class="card" style="width: 30rem; height:18rem">
-                <img src="./patient_his.jpg" class="card-img-top" alt="notficiation">
+            <div class="card">
+                <img src="./medical_notifications.jpg" class="card-img-top" alt="notficiation" height="336px">
                 <div class="card-body">
                   <h5 class="card-title">Notification History</h5>
                   <p class="card-text">Check how the patient is doing</p>
@@ -58,8 +57,8 @@
               </div>
           </div>
           <div class="col">
-            <div class="card" style="width: 30rem; height:18rem">
-                <img src="./healthcare-chatbot.png" class="card-img-top " alt="chatbot">
+            <div class="card" >
+                <img src="./healthcare-chatbot.png" class="card-img-top img-fluid" alt="chatbot">
                 <div class="card-body">
                   <h5 class="card-title">AI Chatbot</h5>
                   <p class="card-text">Talk to our AI chatbot</p>

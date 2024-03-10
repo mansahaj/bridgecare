@@ -1,4 +1,4 @@
-import { Writable } from "svelte/store";
+import { writable } from "svelte/store";
 import { events, users } from "./db.js"
 import { HealthEvent } from "./HealthEvent.js";
 
@@ -20,8 +20,9 @@ export function saveHealthEvent(store,ev){
     updateStore(store,ev);
 }
 
-export async function getHealthEvents(user){
+export async function getHealthEvents(userid){
+    const user = users.find(u=>u.id==userid);
     const patients = users.filter(u=>user.caresFor.includes(u.id));
-    const foundevents = events.filter(v=>user.caresFor.includes(v.patients));
+    const foundevents = events.filter(v=>user.caresFor.includes(v.patient));
     return foundevents.map(ev=>new HealthEvent({...ev,patient:patients.find(p=>p.id==ev.patient)}));
 }

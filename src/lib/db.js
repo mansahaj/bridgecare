@@ -1,4 +1,5 @@
-import {User} from "./User"
+import {User} from "./User.js"
+import { HealthEvent } from "./HealthEvent.js";
 
 export const users=[
     new User({
@@ -14,5 +15,9 @@ export const users=[
 ];
 
 export let events=[
-
+    new HealthEvent({
+        patient:2,
+        type:"test type",
+        description:"test description"
+    })
 ];

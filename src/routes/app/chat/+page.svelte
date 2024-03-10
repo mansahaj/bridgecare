@@ -1,5 +1,12 @@
-<style>
-#chatbox {
+<svelte:head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .blue_colour{
+            background-color: #59D5E0;
+        }
+        
+        #chatbox {
     width: 500px; /* Increased from 300px to 400px */
     margin: auto;
     background: #f1f1f1;
@@ -71,6 +78,7 @@
     }
     
     </script>
+</svelte:head>
 
 <section id = "heading">
     <h1 class="text-center p-5">Island Health Chatbot</h1>
@@ -82,6 +90,6 @@
         <!-- Chat logs will appear here -->
     </div>
     <input type="text" id="userInput" style="height: 35px;" placeholder="Ask me something...">
-    <button onclick="reply()" class="btn btn-info" style="height: 35px;">Send</button>
+    <button on:click={reply} class="btn btn-info" style="height: 35px;">Send</button>
 </div>
 </section>

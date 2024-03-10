@@ -15,14 +15,14 @@ export const users=[
 ];
 
 export let events=[
-    new HealthEvent({
-        patient:2,
-        type:"test type",
-        description:"test description"
-    }), new HealthEvent({
+     new HealthEvent({
         id:"2",
         patient:2,
-        type:"test TWO",
-        description:"test TWO"
+        type:"MOVED",
+        description:"Travis has been moved to a realistic-sounding place in the hospital"
+    }),new HealthEvent({
+        patient:2,
+        type:"ADMITTED",
+        description:"Travis has been admitted to Royal Jubilee Emergency"
     })
 ];

@@ -14,8 +14,32 @@
             width: 100%; /* Ensures responsiveness */
         }
     </style>
-</svelte:head>
-<section id = "navbar" class="blue_colour">
+  </svelte:head>
+
+  <script>
+    function allowNotifications(){
+        Notification.requestPermission().then((result) => {
+            console.log(result);
+        });
+    
+        // setInterval(()=>{
+            const n = new Notification("test",{
+                text:"You have a new health event",
+                data:{
+                    url:"/history?evt=2"
+                }
+            })
+            n.addEventListener("click",ev=>{
+                ev.preventDefault(); // prevent the browser from focusing the Notification's tab
+                console.log(ev)
+                window.location.href =ev.target.data.url;
+            })
+        // }, 2000);
+    }
+    </script>
+    
+
+  <section id = "navbar" class="blue_colour">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="color: black;">

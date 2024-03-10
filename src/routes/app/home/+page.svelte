@@ -1,24 +1,3 @@
-<script>
-function allowNotifications(){
-    Notification.requestPermission().then((result) => {
-        console.log(result);
-    });
-
-    // setInterval(()=>{
-        const n = new Notification("test",{
-            text:"You have a new health event",
-            data:{
-                url:"/history?evt=2"
-            }
-        })
-        n.addEventListener("click",ev=>{
-            ev.preventDefault(); // prevent the browser from focusing the Notification's tab
-            console.log(ev)
-            window.location.href =ev.target.data.url;
-        })
-    // }, 2000);
-}
-</script>
 
 <sections id = "header">
 <div class="container col-xxl-8 px-4 py-5 ">

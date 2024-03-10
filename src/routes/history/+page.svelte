@@ -3,6 +3,9 @@
     export let data;
     
     $:healthevents=data.healthevents;
+
+    const params=(new URLSearchParams(window.location.search));
+    const eventId=parseInt(params("evt"));
     
 </script>
 
@@ -39,6 +42,6 @@
 
 <div>
 {#each healthevents as healthevent}
-    <HealthEvent {healthevent}></HealthEvent>
+    <HealthEvent {healthevent} selected={healthevent.id==eventId}></HealthEvent>
 {/each}
 </div>

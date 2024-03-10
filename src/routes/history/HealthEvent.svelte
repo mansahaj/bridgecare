@@ -10,7 +10,7 @@
         <div>{healthevent.at}</div>
     </div>
     <div>
-        for {healthevent.patient}
+        for {healthevent.patient.name}
     </div>
     <div>
         <div>Event</div>

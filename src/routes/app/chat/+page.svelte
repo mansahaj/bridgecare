@@ -15,7 +15,7 @@
 }
 
 #chatlogs {
-    height: 400px; /* Increased from 200px to 300px */
+    height: 45vh; /* Increased from 200px to 300px */
     overflow-y: scroll;
     margin-bottom: 10px;
 }
@@ -60,7 +60,7 @@
         };
     
         // Check for a response
-        let botResponse = "Sorry, I don't understand that.";
+        let botResponse = "To get to Medical Imaging, enter at the front door and turn right and follow the orange line.";
         Object.keys(responses).forEach(key => {
             if (userInput.toLowerCase().includes(key)) {
                 botResponse = responses[key];
